@@ -1,0 +1,141 @@
+:root {
+    --dark-blue: #313d5a;
+    --platinum: #eaeaea;
+    --lilac: #73628a;
+    --fire-opal: #e3655b;
+    }
+
+body {
+    margin-left: auto;
+    margin-right: auto;
+} 
+
+main {
+    max-width: 960px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1, h2, h3 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    line-height: 1.5;
+    color: var(--dark-blue);
+}
+
+h1 {
+    text-align: center;
+    color: var(--lilac);
+    border-bottom: solid var(--dark-blue);
+    border-width: 2px;
+}
+
+p {
+    font-family: "Courier New", Courier, monospace;
+    line-height: 1.5;
+    font-size: 20px;
+}
+
+.error {
+    font-family: "Courier New", Courier, monospace;
+    line-height: 1.5;
+    font-size: 20px;
+    color: var(--platinum);
+    background-color: var(--fire-opal);
+    grid-column: 1/4;
+    grid-row: 2/3;
+    padding-left: 1em;
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+.hide {
+    display: none;
+}
+
+#pod {
+    grid-column: 1/4;
+}
+
+.photo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2em;
+}
+
+.photo img {
+    width: 100%;
+    grid-column: 1/2;
+    margin-top: 1em;
+}
+
+.photo div {
+    grid-column: 2/3;
+}
+
+.search {
+    background-color: #dddddd;
+    border: solid black;
+    width: 100%;
+    grid-column: 1/4;
+    margin-bottom: 1em;
+    align-self: center;
+    justify-self: center;
+}
+
+.search label {
+    padding-left: 1em;
+}
+
+.search .submit {
+    display: inline-block;
+    width: 8em;
+    height: 2em;
+    font-size: 16px;
+    background-color: var(--lilac);
+    color: var(--platinum);
+    font-weight: 600;
+    border: none;
+}
+
+.search input {
+    width: 12em;
+    height: 2em;
+    font-size: 14px;
+    text-align: center;
+}
+
+footer {
+    border-top: solid var(--dark-blue);
+    border-width: 2px;
+}
+
+footer p {
+    font-size: 12px;
+    display: inline;
+}
+
+.sat {
+    max-width: 10%;
+    padding-right: 0.25em;
+    align-self: end;
+}
+
+@media screen and (max-width:900px){
+    body {
+        padding: 1em;
+    }
+    .photo {
+        display: block;
+    }
+    .search {
+        display: block;
+    }
+    .search .submit {
+        margin-top: 1em;
+        margin-left: 1em;
+    }
+}
